@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Nitrogen Landscapes: Commercial SEO & Authority Pivot Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070a0f;
+      --bg-card: #0f1523;
+      --bg-card-hover: #141c2e;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(212, 175, 55, 0.3);
+      --emerald-dark: #0a291f;
+      --emerald-bright: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.15);
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Utility Bar */
+    .top-bar {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      background: rgba(7, 10, 15, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge-white-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-accent);
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+
+    .print-btn {
+      background: #1e293b;
+      color: #f8fafc;
+      border: 1px solid var(--border);
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.85rem;
+      padding: 6px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .print-btn:hover {
+      background: var(--gold);
+      color: #070a0f;
+      border-color: var(--gold);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .hero-pre {
+      font-family: var(--font-mono);
+      color: var(--emerald-bright);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 820px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .stat-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .stat-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Common Card & Sections */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .card-emerald {
+      background: linear-gradient(180deg, rgba(10, 41, 31, 0.6) 0%, rgba(15, 21, 35, 0.9) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    /* Comparison Table */
+    .table-container {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg-card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: #131b2e;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      color: #cbd5e1;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .badge-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .badge-keep {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-kill {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .badge-pivot {
+      background: rgba(212, 175, 55, 0.15);
+      color: #fde047;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    /* 3-Month Interactive Tabs */
+    .timeline-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--emerald-dark);
+      border-color: var(--emerald-bright);
+      color: #ffffff;
+      box-shadow: 0 0 15px var(--emerald-glow);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .phase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .phase-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .phase-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .action-list {
+      list-style: none;
+    }
+
+    .action-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+    }
+
+    .action-check {
+      color: var(--emerald-bright);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Keyword Tags */
+    .keyword-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .kw-pill {
+      background: #162035;
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 5px 12px;
+      border-radius: 6px;
+      color: #cbd5e1;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding-bottom: 0;
+      }
+      .top-bar, .timeline-nav, .print-btn {
+        display: none !important;
+      }
+      .hero h1 {
+        background: none !important;
+        -webkit-text-fill-color: #0f172a !important;
+        color: #0f172a !important;
+      }
+      .card, .stat-card, .phase-card, .table-container {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #0f172a !important;
+        box-shadow: none !important;
+      }
+      th {
+        background: #f1f5f9 !important;
+        color: #334155 !important;
+      }
+      td, .action-item, .hero-lead, .stat-value {
+        color: #0f172a !important;
+      }
+      .tab-content {
+        display: block !important;
+        margin-bottom: 24px;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.1rem; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="badge-white-label">
+        <span>Strategic Delivery</span>
+        <span>•</span>
+        <span>Prepared for Gabriel</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2m-12 0v4h12v-4M6 14h12"></path></svg>
+        Save / Print PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-pre">B2B Commercial Transition • 90-Day Master Blueprint</div>
+      <h1>Nitrogen Landscapes: Commercial Authority & SEO Roadmap</h1>
+      <p class="hero-lead">
+        A structured strategic roadmap to transition Nitrogen Landscapes from low-ticket residential yard chores into high-ticket commercial property management, HOA communities, and municipal LID compliance contracts across Southern California.
+      </p>
+
+      <div class="stats-strip">
+        <div class="stat-card">
+          <div class="stat-label">Reference Model</div>
+          <div class="stat-value" style="color: var(--emerald-bright);">BrightView</div>
+          <div class="stat-sub">$2.8B National Enterprise Standard</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Target Revenue</div>
+          <div class="stat-value" style="color: var(--gold);">$2.5k–$10k+</div>
+          <div class="stat-sub">Monthly Recurring B2B Contracts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Physical Centroid</div>
+          <div class="stat-value">90044 LA</div>
+          <div class="stat-sub">1325 W. 59th St. (South LA)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">C-27 State License</div>
+          <div class="stat-value">Verified</div>
+          <div class="stat-sub">CA Landscape Contractor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Strategic Alignment vs BrightView -->
+  <section style="padding: 48px 0; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <h2 class="section-title">
+        <svg width="22" height="22" fill="none" stroke="var(--emerald-bright)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+        The BrightView Reference Model (Why & How We Mirror It)
+      </h2>
+      <p class="section-desc">Luis Navarro's core vision is to mirror BrightView. We adapt BrightView's enterprise taxonomy to dominate Southern California local procurement.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Pillar</th>
+              <th>BrightView Enterprise Standard</th>
+              <th>Nitrogen Landscapes (Live Audit)</th>
+              <th>The Strategic Pivot (Our Plan)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Positioning</strong></td>
+              <td>100% Commercial grounds maintenance & corporate development partner.</td>
+              <td>Mixed messaging ("we serve commercial and residential").</td>
+              <td>Pure B2B Commercial Contractor positioning across all pages.</td>
+            </tr>
+            <tr>
+              <td><strong>Service Taxonomy</strong></td>
+              <td>Organized by Sectors: Corporate, HOAs, Retail, Healthcare, Education.</td>
+              <td>Organized by yard chores: stump grinding, lawn aeration, residential repair.</td>
+              <td>Establish 4 Core B2B Pillars: Maintenance, Smart Water, LID, Construction.</td>
+            </tr>
+            <tr>
+              <td><strong>Geography</strong></td>
+              <td>175+ nationwide offices.</td>
+              <td>9 scattered residential suburbs (Malibu, Pacific Palisades, Palos Verdes).</td>
+              <td>4 Regional B2B Hubs: South Bay, Westside LA, DTLA, San Fernando Valley.</td>
+            </tr>
+            <tr>
+              <td><strong>Trust & Conversion</strong></td>
+              <td>Corporate RFPs, safety audits, insurance proofs, and commercial specs.</td>
+              <td>"Call for a quote" residential contact forms.</td>
+              <td>Formal Commercial RFP Bid submission intake with C-27 verification.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Technical Audit & Asset Inventory -->
+  <section style="padding: 48px 0; border-bottom: 1px solid var(--border);" class="page-break">
+    <div class="container">
+      <h2 class="section-title">
+        <svg width="22" height="22" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+        Technical Audit & Live Asset Diagnostics (30 URLs Audited)
+      </h2>
+      <p class="section-desc">Empirical findings extracted directly from live Nginx server headers, RankMath XML sitemaps, and KML location records.</p>
+
+      <div class="grid-2">
+        <div class="card card-emerald">
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: #ffffff; margin-bottom: 12px;">The Uncontested B2B Advantage: LA LID Compliance</h3>
+          <p style="font-size: 0.92rem; color: #cbd5e1; margin-bottom: 16px;">
+            The live audit discovered 2 published articles on <strong>LID (Low Impact Development) Stormwater Compliance</strong>. The City of Los Angeles Bureau of Sanitation (LASAN) mandates LID compliance for commercial projects. 
+          </p>
+          <div style="background: rgba(0,0,0,0.3); padding: 12px 16px; border-radius: 8px; border-left: 3px solid var(--emerald-bright); font-size: 0.88rem;">
+            <strong>Immediate Action:</strong> Promote LID Compliance from buried blog posts into a flagship navigation service page: <code>/los-angeles-lid-stormwater-compliance/</code>.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 12px;">Residential Cleanup Action Matrix</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">These active residential pages dilute topical authority and must be removed:</p>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
+              <span><code>/stump-grinding</code></span>
+              <span class="badge-tag badge-kill">301 Redirect to /commercial-landscape-maintenance</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
+              <span><code>/lawn-aeration</code></span>
+              <span class="badge-tag badge-kill">301 Redirect to /commercial-lawn-services</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
+              <span><code>/sprinkler-repair</code></span>
+              <span class="badge-tag badge-pivot">Rebuild as /commercial-smart-irrigation-systems</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 2px;">
+              <span><code>/landscaping-in-malibu</code></span>
+              <span class="badge-tag badge-pivot">Convert to Regional B2B Hub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: 90-Day Execution Roadmap -->
+  <section style="padding: 48px 0; border-bottom: 1px solid var(--border);" class="page-break">
+    <div class="container">
+      <h2 class="section-title">
+        <svg width="22" height="22" fill="none" stroke="var(--emerald-bright)" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+        90-Day Phased Execution Roadmap
+      </h2>
+      <p class="section-desc">Sequential implementation schedule structured for maximum commercial impact and transparent reporting.</p>
+
+      <div class="timeline-nav">
+        <button class="tab-btn active" onclick="switchTab(0)">Month 1: Cleanup & Pivot</button>
+        <button class="tab-btn" onclick="switchTab(1)">Month 2: B2B Authority & Hubs</button>
+        <button class="tab-btn" onclick="switchTab(2)">Month 3: Scaling & Map Pack</button>
+      </div>
+
+      <!-- Month 1 -->
+      <div class="tab-content active" id="tab-0">
+        <div class="phase-card">
+          <div class="phase-header">
+            <div>
+              <span class="phase-badge">Sprint 01 • Days 1 to 30</span>
+              <h3 class="phase-title">Foundation Cleanup, Domain Resolution & Core Service Alignment</h3>
+            </div>
+          </div>
+          <ul class="action-list">
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Domain SSL Resolution:</strong> Resolve Cloudflare SSL 525 on <code>nitrogenlandscapes.com</code> (plural) and establish permanent 301 server redirect to singular <code>nitrogenlandscape.com</code>.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Residential Content Pruning:</strong> Deindex and 301-redirect the 6 residential chore pages (stump grinding, aeration, residential sprinklers) into commercial target destinations.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Homepage Commercial Overhaul:</strong> Strip all mixed residential claims; deploy enterprise B2B copy emphasizing commercial properties, corporate parks, and HOA communities.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Pillar Service Page Upgrades:</strong> Rebuild <code>/commercial-landscape-maintenance</code> with commercial RFP intake, launch <code>/los-angeles-lid-stormwater-compliance/</code> and <code>/commercial-smart-irrigation-systems/</code>.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>B2B Schema Deployment:</strong> Inject validated JSON-LD schema defining Nitrogen Landscapes as a licensed California C-27 <code>LandscapeContractor</code> and <code>CommercialService</code> provider.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Spam Backlink Detox:</strong> Export existing backlink profile, identify legacy directory spam, and compile Google Disavow file.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Month 2 -->
+      <div class="tab-content" id="tab-1">
+        <div class="phase-card">
+          <div class="phase-header">
+            <div>
+              <span class="phase-badge">Sprint 02 • Days 31 to 60</span>
+              <h3 class="phase-title">Commercial Authority Building & Regional B2B Hub Architecture</h3>
+            </div>
+          </div>
+          <ul class="action-list">
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>4 Regional Commercial B2B Hubs:</strong> Launch dedicated regional landing pages targeting high-density commercial corridors: South Bay, Westside LA, Downtown LA, and San Fernando Valley.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Dedicated HOA Property Management Page:</strong> Deploy <code>/hoa-landscape-maintenance-los-angeles/</code> built specifically for HOA boards, community managers, and RFP submissions.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>High-Authority Commercial Directory Citations:</strong> Acquire citations across BOMA Greater Los Angeles, The Blue Book Building & Construction Network, and California commercial builder directories.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Google Business Profile Category Alignment:</strong> Set primary category to <code>Landscape Contractor</code> and secondary to <code>Commercial Landscape Maintenance Service</code> and <code>Landscape Designer</code>.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Month 3 -->
+      <div class="tab-content" id="tab-2">
+        <div class="phase-card">
+          <div class="phase-header">
+            <div>
+              <span class="phase-badge">Sprint 03 • Days 61 to 90</span>
+              <h3 class="phase-title">Scaling, Map Pack Dominance & Commercial Review Engine</h3>
+            </div>
+          </div>
+          <ul class="action-list">
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Commercial Review Generation:</strong> Roll out structured review capture workflow targeting property managers and HOA directors to acquire authentic reviews referencing commercial grounds maintenance.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>Trade Association Authority:</strong> Submit contractor listings to California Landscape Contractors Association (CLCA) and local B2B vendor networks.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>AEO & Generative Engine Optimization:</strong> Deploy structured <code>llms.txt</code> and machine-readable data files so AI engines (Perplexity, ChatGPT, Gemini) cite Nitrogen Landscapes for LA commercial searches.</div>
+            </li>
+            <li class="action-item">
+              <span class="action-check">✓</span>
+              <div><strong>White-Label Reporting Cadence:</strong> Deliver monthly executive performance summaries and walkthrough videos under Gabriel's agency branding.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Target Commercial Keyword Matrix -->
+  <section style="padding: 48px 0; border-bottom: 1px solid var(--border);" class="page-break">
+    <div class="container">
+      <h2 class="section-title">
+        <svg width="22" height="22" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path></svg>
+        Target Commercial B2B Keyword Matrix (25 Core Terms)
+      </h2>
+      <p class="section-desc">Segmented into four high-intent commercial clusters aligned with B2B search demand in Southern California.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--emerald-bright); margin-bottom: 10px;">Cluster 1: Grounds Maintenance</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Recurring monthly maintenance contracts for commercial properties and HOAs:</p>
+          <div class="keyword-cloud">
+            <span class="kw-pill">commercial landscape maintenance los angeles</span>
+            <span class="kw-pill">commercial landscaping services los angeles</span>
+            <span class="kw-pill">hoa landscape maintenance company la</span>
+            <span class="kw-pill">commercial grounds maintenance contract la</span>
+            <span class="kw-pill">corporate campus landscaping los angeles</span>
+            <span class="kw-pill">commercial property grounds care los angeles ca</span>
+            <span class="kw-pill">multi family landscape maintenance los angeles</span>
+            <span class="kw-pill">commercial landscape contractor southern california</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--gold); margin-bottom: 10px;">Cluster 2: Smart Water Management</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">LADWP rebate capture, commercial flow control, and smart retrofits:</p>
+          <div class="keyword-cloud">
+            <span class="kw-pill">commercial smart irrigation los angeles</span>
+            <span class="kw-pill">commercial irrigation maintenance los angeles</span>
+            <span class="kw-pill">commercial drip irrigation installation la</span>
+            <span class="kw-pill">ladwp commercial turf replacement contractor</span>
+            <span class="kw-pill">commercial water management landscaping</span>
+            <span class="kw-pill">commercial backflow and sprinkler repair la</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: #38bdf8; margin-bottom: 10px;">Cluster 3: LA Municipal LID Compliance</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Municipal stormwater runoff mandate for commercial developments:</p>
+          <div class="keyword-cloud">
+            <span class="kw-pill">los angeles lid compliance contractor</span>
+            <span class="kw-pill">commercial lid stormwater management la</span>
+            <span class="kw-pill">commercial bioswale installation los angeles</span>
+            <span class="kw-pill">commercial drainage contractor los angeles</span>
+            <span class="kw-pill">permeable pavers commercial landscaping la</span>
+            <span class="kw-pill">la city lid ordinance landscape contractor</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: #a78bfa; margin-bottom: 10px;">Cluster 4: Commercial Construction</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Capital upgrade projects and exterior commercial renovations:</p>
+          <div class="keyword-cloud">
+            <span class="kw-pill">commercial landscape renovation los angeles</span>
+            <span class="kw-pill">commercial hardscape contractor los angeles</span>
+            <span class="kw-pill">commercial drought tolerant landscape installation</span>
+            <span class="kw-pill">shopping center landscaping los angeles</span>
+            <span class="kw-pill">industrial park landscape contractor los angeles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Governance & Delivery Signoff -->
+  <footer class="footer">
+    <div class="container">
+      <div style="font-family: var(--font-heading); font-size: 1.1rem; color: #ffffff; margin-bottom: 8px;">
+        Nitrogen Landscapes • Commercial SEO & Authority Strategy
+      </div>
+      <p style="margin-bottom: 16px;">
+        Backend Strategy by Sharjeel Digital • White-Label Delivery for Gabriel • Confidential Client Deliverable
+      </p>
+      <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #475569;">
+        Document Version: 2.1 • CSLB C-27 Alignment • Zero Speculative Metrics
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(index) {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach((t, i) => {
+        if (i === index) {
+          t.classList.add('active');
+          contents[i].classList.add('active');
+        } else {
+          t.classList.remove('active');
+          contents[i].classList.remove('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
